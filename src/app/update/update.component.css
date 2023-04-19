@@ -1,0 +1,14 @@
+.main-heading {
+    margin-left: 700px;
+    margin-top: 10px;
+    
+}
+
+.update-container {
+    background-image: url('https://media.istockphoto.com/id/1013435204/photo/businessman-filling-online-registration-form.jpg?b=1&s=170667a&w=0&k=20&c=3zXl5z4At09Hs_gx-rGfRjXhJ7SHJNZO2jW4DfFVDNI=');
+    background-size: cover;
+    min-height: 100vh;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}

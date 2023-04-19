@@ -1,0 +1,69 @@
+<div class="main">
+
+<form class="addemployee" [formGroup]="regForm">
+  <h4 class="main-heading">Register Here</h4>
+  <br>
+  <div class="container justify-content-center">
+  <div class="form-row">
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom01">First name</label>
+      <input type="text" class="form-control" id="validationCustom01" formControlName="Firstname" placeholder="Enter Your First name" value="" required> 
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom02">Last name</label>
+      <input type="text" class="form-control" id="validationCustom02" formControlName="Lastname" placeholder="Enter Your Last name" value="" required>     
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom02">Email </label>
+      <input type="text" class="form-control" id="validationCustom02" formControlName="Email" placeholder="Enter Your Email" value="" required>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom01">Company</label>
+      <input type="text" class="form-control" id="validationCustom01" formControlName="Company" placeholder="Enter Your Company Name" value="" required> 
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom02">Location</label>
+      <input type="text" class="form-control" id="validationCustom02" formControlName="Location" placeholder="Enter Your Location" value="" required>     
+    </div>
+    <div class="col-md-4 mb-3">
+      <label for="validationCustom02">Mobile</label>
+      <input type="text" class="form-control" id="validationCustom02" formControlName="mobile" placeholder="Enter Your Mobile Number" value="" required>
+    </div>
+  </div>
+      <button class="btn btn-success postbutton" (click)="show()">Save</button>
+  </div>
+</form>
+</div>
+<br>
+<br>
+
+<div class="bg-container">
+<div class="row">
+  <div class="row row-cols-2 sm-2 row-cols-md-4"> <!--Grid Class Medium Devices - Scrren Width >= 768px-->
+    <div *ngFor="let regForm of employees">  <!--Repeats a node for each item in a list--> 
+    <div class="card" > 
+      <div class="card-body bg-image">
+        
+        <p>First Name : {{ regForm.Firstname }}</p>
+        <p>Last Name : {{ regForm.Lastname }}</p>
+        <p>Company &nbsp; : {{ regForm.Company }}</p>
+        <p>Mobile No : {{ regForm.mobile }}</p>
+        <p>Email Id &nbsp; &nbsp; &nbsp;: {{ regForm.Email }}</p>
+        <p>Location &nbsp; &nbsp;: {{ regForm.Location }}</p>
+       
+        <button class="btn btn-danger deletebutton" (click)="remove(regForm.Firstname)">Delete</button>
+        <button  class="btn btn-primary updatebutton" (click)="update(regForm)">Edit</button>
+        <i claass="fa fa-edit" style="font-size: 20px; color: blue;"></i> 
+    </div>
+  </div>
+</div> 
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
