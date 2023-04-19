@@ -36,7 +36,8 @@ export class UpdateComponent implements OnInit {
        .then(res=> res.json()) // converts result into json format
        .then(result=>{ 
          console.log(result) // Displays the Result in Console
-         alert('Changes Updated Succesfully') // Gives An Alert Message With Ok
+         alert('Changes Updated Succesfully')
+         window.location.href='./employee' // Gives An Alert Message With Ok
       })
       .catch(err => // Display The Error
         console.log(err)) 

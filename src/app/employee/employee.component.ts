@@ -30,7 +30,7 @@ import { ActivatedRoute } from '@angular/router';
     update (employees:any) { // "update" method that takes "employees" as a parameter
       this.regForm=employees // sets the "regForm" property with the "employees" value
       localStorage.setItem('employees',JSON.stringify(employees)) // stores the "employees" data in the localStorage
-      window.location.href='/updatedata' //Navigates to '/updatedata' URL:
+      window.location.href='./updatedata' //Navigates to '/updatedata' URL:
      }
 
 
